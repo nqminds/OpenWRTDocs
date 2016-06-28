@@ -37,7 +37,7 @@ Choose file from the repository: **backup-mylinkit-2016-06-27.tar.gz**. The rest
 
 Press "Upload Archive"
 
-Reconnect again to Linkit_Smart_7688_1C42E1 if it losses connection.
+Reconnect again to Linkit_Smart_7688_1C42E1 if it losses connection WiFi.
 
 ## Configure WiFi ##
 LogIn into the shell with: ssh root@192.168.100.1
@@ -87,7 +87,7 @@ To restart the wifi connection use:
 ```
 wifi
 ```
-Reconnect again to Linkit_Smart_7688_1C42E1 if it losses connection.
+Reconnect again to Linkit_Smart_7688_1C42E1 WiFi if it losses connection.
 
 ## Configure 3G Dongle ##
 
