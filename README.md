@@ -96,7 +96,17 @@ Clean root directory if it gets corrupted (OpenWRT bug):
 ```
 find . -maxdepth 1 -type f -exec rm -f {} \;
 ```
-Execute the above command form the root directory
+Execute the above command form the root directory.
+
+Package list update:
+```
+opkg update
+```
+
+Package list install:
+```
+opkg install packagename
+```
 
 
 ## Configure 3G Dongle ##
