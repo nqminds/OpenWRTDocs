@@ -156,6 +156,13 @@ git clone https://user@github.com/nqminds/cozy-emails.git
 ```
 Replace 'user' in the above command with the git account username. 
 
+## Configure Startup ##
+Install coreutils-nohup package:
+```
+opkg update
+opkg install coreutils-nohup
+```
+
 ## Useful Commands ##
 Show the kernel logs:
 ```
