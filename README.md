@@ -118,6 +118,7 @@ vi
 Copy **usb-mode.json** from the repository to /etc/usb-mode.json. The file sets the vendor and product id for the 3g Dongle. Check with dmesg or lsusb commands. The 3G dongle should be in modem mode (3 serial ports) with /dev/ttyUSB0 as the main modem port. Restart the device if it doesn't show the modem mode.
 
 Uncomment the follwing lines from the /etc/config/network:
+
 config interface 'wan2'
 
        option ifname  ppp0
