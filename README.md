@@ -91,5 +91,5 @@ wifi
 Copy **usb-mode.json** from the repository to /etc/usb-mode.json. The file sets the vendor and product id for the 3g Dongle.
 
 ## Links ##
-**[3G DOngle Setup for OpenWRT](https://wiki.openwrt.org/doc/recipes/3gdongle)**
+**[3G Dongle Setup for OpenWRT](https://wiki.openwrt.org/doc/recipes/3gdongle)**
 
