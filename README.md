@@ -96,15 +96,10 @@ Copy **usb-mode.json** from the repository to /etc/usb-mode.json. The file sets 
 Uncomment the following lines from /etc/config/network:
 
        config interface 'wan2'
-
        option ifname  ppp0
-
        option device  /dev/ttyUSB0
-
        option apn data641003
-
        option service umts
-
        option proto   3g
 
 The option apn and option device is set for the Huawei 3G dongle.
