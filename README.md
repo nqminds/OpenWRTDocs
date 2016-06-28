@@ -77,8 +77,6 @@ option encryption 'psk2'
 The option path "101c1000.ohci/usb2/2-1/2-1.1/2-1.1:1.0" depends on where the WiFi USB is installed. Use
 
 ```
-#!wifi detect
-
 wifi detect
 ```
 to retrieve the correct option path. Set the correct option ssid and option key.
@@ -86,8 +84,6 @@ to retrieve the correct option path. Set the correct option ssid and option key.
 To restart the wifi connection use:
 
 ```
-#!wifi
-
 wifi
 ```
 
