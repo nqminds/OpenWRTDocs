@@ -93,3 +93,10 @@ Copy **usb-mode.json** from the repository to /etc/usb-mode.json. The file sets 
 ## Links ##
 **[3G Dongle Setup for OpenWRT](https://wiki.openwrt.org/doc/recipes/3gdongle)**
 
+**[Linkit Manual](http://labs.mediatek.com/fileMedia/download/87c801b5-d1e6-4227-9a29-b5421f2955ac)**
+
+**[LinkIt FAQ](http://labs.mediatek.com/fileMedia/download/47ddd4c6-044f-406d-b395-a108f0aa6b42)**
+
+**[LinkIt WiFi Setup](https://home.labs.mediatek.com/using-mediatek-linkit-smart-7688-as-a-wi-fi-router-how-to-use-a-wi-fi-dongle/)**
+
+**[Kernel Compilation Instructions](https://github.com/MediaTek-Labs/linkit-smart-7688-feed)**
