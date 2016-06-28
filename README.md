@@ -109,6 +109,17 @@ Uncomment the following lines from /etc/config/network:
 
 The option apn and option device is set for the Huawei 3G dongle.
 
+Add wan2 to the option network 'wan wan6' in /etc/config/firewall:
+
+        config zone
+        option name 'wan'
+        option output 'ACCEPT'
+        option forward 'REJECT'
+        option masq '1'
+        option mtu_fix '1'
+        option input 'ACCEPT'
+        option network 'wan wan2 wan6'
+ 
 ## Useful Commands ##
 Show the kernel logs:
 ```
