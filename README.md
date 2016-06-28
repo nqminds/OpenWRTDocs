@@ -119,7 +119,7 @@ Copy **usb-mode.json** from the repository to /etc/usb-mode.json. The file sets 
 
 Uncomment the follwing lines from the /etc/config/network:
 
-   config interface 'wan2'
+       config interface 'wan2'
 
        option ifname  ppp0
 
