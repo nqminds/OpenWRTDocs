@@ -115,7 +115,20 @@ vi
 
 ## Configure 3G Dongle ##
 
-Copy **usb-mode.json** from the repository to /etc/usb-mode.json. The file sets the vendor and product id for the 3g Dongle.
+Copy **usb-mode.json** from the repository to /etc/usb-mode.json. The file sets the vendor and product id for the 3g Dongle. Check with dmesg or lsusb commands. The 3G dongle should be in modem mode (3 serial ports) with /dev/ttyUSB0 as the main modem port. Restart the device if it doesn't show the modem mode.
+
+Uncomment the follwing lines from the /etc/config/network:
+config interface 'wan2'
+
+       option ifname  ppp0
+
+       option device  /dev/ttyUSB0
+
+       option apn data641003
+
+       option service umts
+
+       option proto   3g
 
 ## Links ##
 **[3G Dongle Setup for OpenWRT](https://wiki.openwrt.org/doc/recipes/3gdongle)**
