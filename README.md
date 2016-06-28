@@ -89,8 +89,15 @@ wifi
 ## Useful Commands ##
 Show the kernel log:
 ```
-dmesg
+dmesg, logread
 ```
+
+Clean root directory if it gets corrupted (OpenWRT bug):
+```
+find . -maxdepth 1 -type f -exec rm -f {} \;
+```
+Execute the above command form the root directory
+
 
 ## Configure 3G Dongle ##
 
