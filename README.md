@@ -148,6 +148,13 @@ Check if the SD-CARD mounted with:
 ```
 df -h
 ```
+## Configure Cozy-Email Client ##
+Clone the cozy-email repo into /root:
+```
+cd /root
+git clone https://user@github.com/nqminds/cozy-emails.git
+```
+Replace 'user' in the above command with the git account username. 
 
 ## Useful Commands ##
 Show the kernel logs:
