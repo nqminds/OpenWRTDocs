@@ -119,6 +119,13 @@ Format the SD-CARD to ext4:
 ```
 mkfs.ext4 /dev/mmcblk0p1
 ```
+Click on the default options.
+
+Install block-mount package:
+```
+opkg update
+opkg install block-mount
+```
 
 
 ## Useful Commands ##
