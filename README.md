@@ -45,7 +45,7 @@ The configuration for the WiFi USB is located in /etc/config/wireless
 A typical WiFi options:
 
 config wifi-device  radio3
-                    
+
 option type     mac80211                            
 
 option channel  11                                      
@@ -57,7 +57,7 @@ option path     '101c1000.ohci/usb2/2-1/2-1.1/2-1.1:1.0'
 option htmode   HT20                                
 
 option disabled 0                                       
-                                                                
+
 
 config wifi-iface                                         
 
