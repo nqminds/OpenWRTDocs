@@ -108,6 +108,13 @@ ifup wan
 ```
 Reconnect again to Linkit_Smart_7688_1C42E1 WiFi if it losses connection.
 
+## Configure SD-CARD ##
+Find the SD-CARD partition:
+```
+fdisk -l
+```
+It is usually /dev/mmcblk0p1.
+
 ## Useful Commands ##
 Show the kernel logs:
 ```
