@@ -90,7 +90,7 @@ wifi
 
 Copy **usb-mode.json** from the repository to /etc/usb-mode.json. The file sets the vendor and product id for the 3g Dongle. Check with dmesg or lsusb commands. The 3G dongle should be in modem mode (3 serial ports) with /dev/ttyUSB0 as the main modem port. Restart the device if it doesn't show the modem mode.
 
-Uncomment the following lines from the /etc/config/network:
+Uncomment the following lines from /etc/config/network:
 
        config interface 'wan2'
 
@@ -104,6 +104,7 @@ Uncomment the following lines from the /etc/config/network:
 
        option proto   3g
 
+The option apn and option device is set for the Huawei 3G dongle.
 
 ## Useful Commands ##
 Show the kernel logs:
