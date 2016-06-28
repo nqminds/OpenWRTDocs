@@ -121,12 +121,29 @@ mkfs.ext4 /dev/mmcblk0p1
 ```
 Click on the default options.
 
-Install block-mount package:
+Install block-mount package (interent connection required, WiFi or 3G Dongle):
 ```
 opkg update
 opkg install block-mount
 ```
+Add to /etc/config/fstab the following:
 
+        config 'mount'
+        option 'device' '/dev/mmcblk0p1'
+        option 'options' 'rw,async'
+        option 'enabled_fsck' '0'
+        option 'enabled' '1'
+        option 'target' '/root'
+
+Mount the SD-CARD to /root with:
+```
+/etc/init.d/fstab start
+```
+
+Execute on device startup:
+```
+/etc/init.d/fstab enable
+```
 
 ## Useful Commands ##
 Show the kernel logs:
