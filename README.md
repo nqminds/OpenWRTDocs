@@ -7,7 +7,7 @@
 5. Configure SD-CARD
 6. Configure Cozy-email client
 7. Configure Toby's app client
-8. Configure startup
+8. Configure startup script
 
 ## Change root password ##
 Connect to WiFi: Linkit_Smart_7688_1C42E1 (the last 6 characters are board dependent).
@@ -156,11 +156,19 @@ git clone https://user@github.com/nqminds/cozy-emails.git
 ```
 Replace 'user' in the above command with the git account username. 
 
-## Configure Startup ##
+## Configure Startup Script##
 Install coreutils-nohup package:
 ```
 opkg update
 opkg install coreutils-nohup
+```
+Add the following lines to /etc/rc.local:
+```
+nohup /root/cozy-emails/bin/emails > /root/cozy-emails.log 2>&1 &
+```
+The above line will start the apps in background and save the output in a log file *.log. To ommit the log file use:
+```
+nohup /root/cozy-emails/bin/emails > /dev/null 2>&1 &
 ```
 
 ## Useful Commands ##
