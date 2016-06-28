@@ -46,33 +46,32 @@ A typical WiFi options:
 
 config wifi-device  radio3
 
-option type     mac80211                            
+  option type     mac80211                            
 
-option channel  11                                      
+  option channel  11                                      
 
-option hwmode   11g                                 
+  option hwmode   11g                                 
 
-option path     '101c1000.ohci/usb2/2-1/2-1.1/2-1.1:1.0'
+  option path     '101c1000.ohci/usb2/2-1/2-1.1/2-1.1:1.0'
 
-option htmode   HT20                                
+  option htmode   HT20                                
 
-option disabled 0
+  option disabled 0
 
-config wifi-iface
+  config wifi-iface
 
 
 option device   'radio3'                            
 
-option network  'wan'                               
+  option network  'wan'                               
 
-option mode     'sta'                                   
+  option mode     'sta'                                   
 
-option ssid     'AMNET'                                 
+  option ssid     'AMNET'                                 
 
-option key '1234554321'                                 
+  option key '1234554321'                                 
 
-option encryption 'psk2'
-
+  option encryption 'psk2'
 
 The option path "101c1000.ohci/usb2/2-1/2-1.1/2-1.1:1.0" depends on where the WiFi USB is installed. Use
 
