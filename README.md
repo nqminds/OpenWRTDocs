@@ -23,7 +23,7 @@ LogIn into http://mylinkit.local
 
 Press "Upgrade Firmware"
 
-Choose the file from the git repository: lks7688.img
+Choose the file from the git repository: **lks7688.img**
 
 Press "Upgrade and Restart"
 
@@ -33,7 +33,7 @@ From the menu choose System/Backup/Flash Firmware
 
 Restore backup:
 
-Choose file from the repository backup-mylinkit-2016-06-27.tar.gz
+Choose file from the repository: **backup-mylinkit-2016-06-27.tar.gz**. The restore backup options will copy all the files from the archive into the etc directory.
 
 Press "Upload Archive"
 
@@ -90,3 +90,7 @@ To restart the wifi connection use:
 
 wifi
 ```
+
+## Configure 3G Dongle ##
+
+Copy **usb-mode.json** from the repository to /etc/usb-mode.json.
