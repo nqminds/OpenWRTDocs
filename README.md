@@ -144,6 +144,10 @@ Execute on device startup:
 ```
 /etc/init.d/fstab enable
 ```
+Check if the SD-CARD mounted with:
+```
+df -h
+```
 
 ## Useful Commands ##
 Show the kernel logs:
