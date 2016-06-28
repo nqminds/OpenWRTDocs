@@ -101,7 +101,13 @@ Add wan2 to the option network 'wan wan6' in /etc/config/firewall:
         option mtu_fix '1'
         option input 'ACCEPT'
         option network 'wan wan2 wan6'
- 
+
+Restart the wan interface:
+```
+ifup wan
+```
+Reconnect again to Linkit_Smart_7688_1C42E1 WiFi if it losses connection.
+
 ## Useful Commands ##
 Show the kernel logs:
 ```
