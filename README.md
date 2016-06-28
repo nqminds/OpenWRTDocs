@@ -115,6 +115,12 @@ fdisk -l
 ```
 It is usually /dev/mmcblk0p1.
 
+Format the SD-CARD to ext4:
+```
+mkfs.ext4 /dev/mmcblk0p1
+```
+
+
 ## Useful Commands ##
 Show the kernel logs:
 ```
