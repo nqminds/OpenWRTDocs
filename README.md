@@ -87,7 +87,7 @@ wifi
 ```
 
 ## Useful Commands ##
-Show the kernel log:
+Show the kernel logs:
 ```
 dmesg, logread
 ```
@@ -108,6 +108,10 @@ Package list install:
 opkg install packagename
 ```
 
+Text editor:
+```
+vi
+```
 
 ## Configure 3G Dongle ##
 
