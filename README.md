@@ -199,6 +199,8 @@ vi
 ```
 
 ## Links ##
+**[OpenWRT commands](https://wiki.openwrt.org/doc/howto/user.beginner.cli)**
+
 **[3G Dongle Setup for OpenWRT](https://wiki.openwrt.org/doc/recipes/3gdongle)**
 
 **[Linkit Manual](http://labs.mediatek.com/fileMedia/download/87c801b5-d1e6-4227-9a29-b5421f2955ac)**
