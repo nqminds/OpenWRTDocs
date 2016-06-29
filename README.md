@@ -162,7 +162,7 @@ Install coreutils-nohup package:
 opkg update
 opkg install coreutils-nohup
 ```
-Copy cozy-email-run.sh to /root and execute the following commands.
+Copy **cozy-email-run.sh** to /root and execute the following commands.
 ```
 cd /root
 chmod +x cozy-email-run.sh
