@@ -13,14 +13,14 @@
 ## Change root password ##
 Connect to WiFi: Linkit_Smart_7688_1C42E1 (the last 6 characters are board dependent).
 
-Open a browser window and type: http://192.168.100.1 (http://mylinkit.local)
+Open a browser window and type: http://192.168.100.1
 
 In the password field type the new password and press "Submit".
 
 Login again with the new password.
 
 ## Upgrade Firmware ##
-LogIn into http://mylinkit.local
+Open in browser http://192.168.100.1
 
 Press "Upgrade Firmware"
 
@@ -78,6 +78,7 @@ wifi
 Reconnect again to Linkit_Smart_7688_1C42E1 WiFi if it losses connection.
 
 ## Configure 3G Dongle ##
+LogIn into the shell with: ssh root@192.168.100.1
 
 Copy **usb-mode.json** from the repository to /etc/usb-mode.json. The file sets the vendor and product id for the 3g Dongle. Check with dmesg or lsusb commands. The 3G dongle should be in modem mode (3 serial ports) with /dev/ttyUSB0 as the main modem port. Restart the device if it doesn't show the modem mode.
 
@@ -110,6 +111,8 @@ ifup wan
 Reconnect again to Linkit_Smart_7688_1C42E1 WiFi if it losses connection.
 
 ## Configure SD-CARD ##
+LogIn into the shell with: ssh root@192.168.100.1
+
 Find the SD-CARD partition:
 ```
 fdisk -l
@@ -204,6 +207,8 @@ nohup node --harmony_proxies /root/nqm-remote-device-wrt/index.js > /dev/null 2>
 ```
 
 ## Device Management ##
+Connect to the device WiFi.
+
 ### Apps ###
 When the device restarts there will be the following apps available from the broser:
 
