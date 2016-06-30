@@ -167,7 +167,7 @@ Add the following line to /etc/rc.local:
 ```
 nohup /root/cozy-emails/bin/emails > /root/cozy-emails.log 2>&1 &
 ```
-The above line will start the apps in background and save the output in a log file *.log. To ommit the log file use:
+The above line will start the apps in background when the device starts and saves the output in a log file *.log. To ommit the log file use:
 ```
 nohup /root/cozy-emails/bin/emails > /dev/null 2>&1 &
 ```
