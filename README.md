@@ -162,20 +162,26 @@ Install coreutils-nohup package:
 opkg update
 opkg install coreutils-nohup
 ```
-Copy **cozy-email-run.sh** from the git repository to /root and execute the following commands.
+
+Add the following line to /etc/rc.local:
+```
+nohup /root/cozy-emails/bin/emails > /root/cozy-emails.log 2>&1 &
+```
+The above line will start the apps in background and save the output in a log file *.log. To ommit the log file use:
+```
+nohup /root/cozy-emails/bin/emails > /dev/null 2>&1 &
+```
+
+[Optional] If nedded the cozy-email-run.sh restarts the cozy-email node app if it crashes.
+
+[Optional] Copy **cozy-email-run.sh** from the git repository to /root and execute the following commands.
 ```
 cd /root
 chmod +x cozy-email-run.sh
 ```
-The cozy-email-run.sh restarts the cozy-email node app if it crashes.
-
-Add the following lines to /etc/rc.local:
+[Optional] Add the following lines to /etc/rc.local:
 ```
 nohup /root/cozy-email-run.sh > /root/cozy-emails.log 2>&1 &
-```
-The above line will start the apps in background and save the output in a log file *.log. To ommit the log file use:
-```
-nohup /root/cozy-email-run.sh > /dev/null 2>&1 &
 ```
 
 ## Useful Commands ##
