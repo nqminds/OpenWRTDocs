@@ -175,12 +175,17 @@ opkg install coreutils-nohup
 Add the following lines to /etc/rc.local:
 ```
 export HOME=/root
+export DEBUG=*
 nohup /root/cozy-emails/bin/emails > /root/cozy-emails.log 2>&1 &
+nohup node --harmony_proxies /root/nqm-remote-device-wrt/index.js > /root/toby-app.log 2>&1 &
+
 ```
 The above line will start the apps in background when the device starts and saves the output in a log file *.log. To ommit the log file use:
 ```
 export HOME=/root
+export DEBUG=*
 nohup /root/cozy-emails/bin/emails > /dev/null 2>&1 &
+nohup node --harmony_proxies /root/nqm-remote-device-wrt/index.js > /dev/null 2>&1 &
 ```
 
 [Optional] If nedded the cozy-email-run.sh restarts the cozy-email node app if it crashes.
@@ -193,8 +198,11 @@ chmod +x cozy-email-run.sh
 [Optional] Add the following lines to /etc/rc.local:
 ```
 export HOME=/root
+export DEBUG=*
 nohup /root/cozy-email-run.sh > /root/cozy-emails.log 2>&1 &
+nohup node --harmony_proxies /root/nqm-remote-device-wrt/index.js > /dev/null 2>&1 &
 ```
+
 ## Device Management ##
 ### WiFi ###
 One can change the WiFi SSID and password by following the instructions in step 3. However for everyday use the easist way is to login into LUCI interface: [mylinkit.local/cgi-bin/luci](http://mylinkit.local/cgi-bin/luci). Then go to the menu Network/WiFi. There press on the "Edit" button for Generic 802.11 Wireless Controller (radio3). In the "General setup" for "Interface configuration" edit ESSID (name of the WiFi network) and in "Wireless security" edit Key (WiFi network password). Then press "Save & Apply" button.
