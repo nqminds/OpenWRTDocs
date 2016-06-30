@@ -163,12 +163,14 @@ opkg update
 opkg install coreutils-nohup
 ```
 
-Add the following line to /etc/rc.local:
+Add the following lines to /etc/rc.local:
 ```
+export HOME=/root
 nohup /root/cozy-emails/bin/emails > /root/cozy-emails.log 2>&1 &
 ```
 The above line will start the apps in background when the device starts and saves the output in a log file *.log. To ommit the log file use:
 ```
+export HOME=/root
 nohup /root/cozy-emails/bin/emails > /dev/null 2>&1 &
 ```
 
@@ -181,6 +183,7 @@ chmod +x cozy-email-run.sh
 ```
 [Optional] Add the following lines to /etc/rc.local:
 ```
+export HOME=/root
 nohup /root/cozy-email-run.sh > /root/cozy-emails.log 2>&1 &
 ```
 
