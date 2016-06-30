@@ -8,6 +8,7 @@
 6. Configure Cozy-email client
 7. Configure Toby's app client
 8. Configure startup script
+9. Device management
 
 ## Change root password ##
 Connect to WiFi: Linkit_Smart_7688_1C42E1 (the last 6 characters are board dependent).
@@ -186,6 +187,8 @@ chmod +x cozy-email-run.sh
 export HOME=/root
 nohup /root/cozy-email-run.sh > /root/cozy-emails.log 2>&1 &
 ```
+## Device Management ##
+### WiFi ###
 
 ## Useful Commands ##
 Show the kernel logs:
@@ -193,8 +196,9 @@ Show the kernel logs:
 dmesg, logread
 ```
 
-Clean root directory if it gets corrupted (OpenWRT bug):
+Clean "/" directory if it gets corrupted (OpenWRT bug):
 ```
+cd /
 find . -maxdepth 1 -type f -exec rm -f {} \;
 ```
 Execute the above command form the root directory.
