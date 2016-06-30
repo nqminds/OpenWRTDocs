@@ -207,7 +207,7 @@ nohup node --harmony_proxies /root/nqm-remote-device-wrt/index.js > /dev/null 2>
 ```
 
 ## Device Management ##
-Connect to the device WiFi.
+Connect to the device's WiFi network if the internet is not shared between the device and the user (for instace when the device is connected to a 3G Dongle). If the device and the user share the same internet connection (through the same WiFi router) one doesn't need to connect to the device's WiFi network to access the apps, etc. 
 
 ### Apps ###
 When the device restarts there will be the following apps available from the broser:
