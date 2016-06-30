@@ -189,7 +189,7 @@ nohup /root/cozy-email-run.sh > /root/cozy-emails.log 2>&1 &
 ```
 ## Device Management ##
 ### WiFi ###
-
+One can change the WiFi SSID and password by following the instructions in step 3. However for everyday use the easist way is to login into LUCI interface: [LUCI](http://mylinkit.local/cgi-bin/luci)
 ## Useful Commands ##
 Show the kernel logs:
 ```
