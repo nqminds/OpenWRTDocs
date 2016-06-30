@@ -157,6 +157,14 @@ git clone https://user@github.com/nqminds/cozy-emails.git
 ```
 Replace 'user' in the above command with the git account username. 
 
+## Configure Toby's App Client ##
+Clone the Toby's app client repo into /root:
+```
+cd /root
+git clone https://user@github.com/nqminds/nqm-remote-device-wrt.git
+```
+Replace 'user' in the above command with the git account username. 
+
 ## Configure Startup Script##
 Install coreutils-nohup package:
 ```
