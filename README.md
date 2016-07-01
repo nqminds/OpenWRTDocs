@@ -111,9 +111,30 @@ Add wan2 to the option network 'wan wan6' in /etc/config/firewall:
         option input 'ACCEPT'
         option network 'wan wan2 wan6'
 
-Restart the wan interface:
+Replace the text in /etc/chatscripts/3g.chat with:
 ```
-ifup wan
+ABORT   BUSY
+ABORT   'NO CARRIER'
+ABORT   ERROR
+REPORT  CONNECT
+TIMEOUT 10
+""      "AT&F"
+OK      "ATE1"
+OK      'AT+CGDCONT=1,"IP","$USE_APN"'
+SAY     "Calling UMTS/GPRS"
+TIMEOUT 30
+OK      "ATD*99***1#"
+CONNECT ' '
+```
+Check the modem connection with:
+```
+logread
+```
+If the modem doesn't connect change the line 'OK "ATD*99***1#"' from /etc/chatscripts/3g.chat to 'OK "ATD*99#"'. The line defines the dialup number for the modem.
+
+Restart the wan interface or reboot:
+```
+ifup wan2
 ```
 Reconnect again to Linkit_Smart_7688_1C42E1 WiFi if it losses connection.
 
