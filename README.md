@@ -78,8 +78,15 @@ wifi
 Reconnect again to Linkit_Smart_7688_1C42E1 WiFi if it losses connection.
 
 ## Configure 3G Dongle ##
-LogIn into the shell with: ssh root@192.168.100.1
-
+LogIn into the shell with: ssh root@192.168.100.1. Check that there's internet connection:
+```
+ifconfig
+```
+Download the comgt package:
+```
+opkg update
+opkg install comgt
+```
 Copy **usb-mode.json** from the repository to /etc/usb-mode.json. The file sets the vendor and product id for the 3g Dongle. Check with dmesg or lsusb commands. The 3G dongle should be in modem mode (3 serial ports) with /dev/ttyUSB0 as the main modem port. Restart the device if it doesn't show the modem mode.
 
 Uncomment the following lines from /etc/config/network:
