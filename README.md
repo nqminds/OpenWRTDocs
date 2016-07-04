@@ -138,6 +138,12 @@ ifup wan2
 ```
 Reconnect again to Linkit_Smart_7688_1C42E1 WiFi if it losses connection.
 
+To diagnose any issues with the 3g Dongle use:
+```
+gcom -d /dev/ttyUSB2 info
+```
+where /dev/ttyUSB2 is the debug serial port for the Huawei 3G dongle.
+
 ## Configure SD-CARD ##
 LogIn into the shell with: ssh root@192.168.100.1
 
