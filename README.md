@@ -327,6 +327,8 @@ When the device restarts there will be the following apps available from the bro
 ### WiFi ###
 One can change the WiFi SSID and password by following the instructions in step 3. However for everyday use the easist way is to login into LUCI interface: [mylinkit.local/cgi-bin/luci](http://mylinkit.local/cgi-bin/luci). Then go to the menu Network/WiFi. There press on the "Edit" button for Generic 802.11 Wireless Controller (radio3). In the "General setup" for "Interface configuration" edit ESSID (name of the WiFi network) and in "Wireless security" edit Key (WiFi network password). Then press "Save & Apply" button.
 
+### 3g Dongle ###
+
 ## Useful Commands ##
 Show the kernel logs:
 ```
