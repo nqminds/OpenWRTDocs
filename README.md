@@ -130,17 +130,58 @@ TIMEOUT 30
 OK      "ATD*99***1#"
 CONNECT ' '
 ```
-Check the modem connection with:
-```
-logread
-```
-If the modem doesn't connect change the line 'OK "ATD*99***1#"' from /etc/chatscripts/3g.chat to 'OK "ATD*99#"'. The line defines the dialup number for the modem.
-
 Restart the wan interface or reboot:
 ```
 ifup wan2
 ```
-Reconnect again to Linkit_Smart_7688_1C42E1 WiFi if it losses connection. Check the internet connectivity with:
+Reconnect again to Linkit_Smart_7688_1C42E1 WiFi if it losses connection.
+
+Check the modem connection with:
+```
+logread
+```
+There should be the following lines:
+```
+Fri Jul  1 16:57:13 2016 daemon.notice pppd[25926]: pppd 2.4.7 started by root, uid 0
+Fri Jul  1 16:57:14 2016 local2.info chat[25928]: abort on (BUSY)
+Fri Jul  1 16:57:14 2016 local2.info chat[25928]: abort on (NO CARRIER)
+Fri Jul  1 16:57:14 2016 local2.info chat[25928]: abort on (ERROR)
+Fri Jul  1 16:57:14 2016 local2.info chat[25928]: report (CONNECT)
+Fri Jul  1 16:57:14 2016 local2.info chat[25928]: timeout set to 10 seconds
+Fri Jul  1 16:57:14 2016 local2.info chat[25928]: send (AT&F^M)
+Fri Jul  1 16:57:14 2016 local2.info chat[25928]: expect (OK)
+Fri Jul  1 16:57:14 2016 local2.info chat[25928]: AT&F^M^M
+Fri Jul  1 16:57:14 2016 local2.info chat[25928]: OK
+Fri Jul  1 16:57:14 2016 local2.info chat[25928]:  -- got it
+Fri Jul  1 16:57:14 2016 local2.info chat[25928]: send (ATE1^M)
+Fri Jul  1 16:57:14 2016 local2.info chat[25928]: expect (OK)
+Fri Jul  1 16:57:14 2016 local2.info chat[25928]: ^M
+Fri Jul  1 16:57:14 2016 local2.info chat[25928]: ATE1^M^M
+Fri Jul  1 16:57:14 2016 local2.info chat[25928]: OK
+Fri Jul  1 16:57:14 2016 local2.info chat[25928]:  -- got it
+Fri Jul  1 16:57:14 2016 local2.info chat[25928]: send (AT+CGDCONT=1,"IP","data641003"^M)
+Fri Jul  1 16:57:14 2016 local2.info chat[25928]: timeout set to 30 seconds
+Fri Jul  1 16:57:14 2016 local2.info chat[25928]: expect (OK)
+Fri Jul  1 16:57:14 2016 local2.info chat[25928]: ^M
+Fri Jul  1 16:57:14 2016 local2.info chat[25928]: AT+CGDCONT=1,"IP","data641003"^M^M
+Fri Jul  1 16:57:14 2016 local2.info chat[25928]: OK
+Fri Jul  1 16:57:14 2016 local2.info chat[25928]:  -- got it
+Fri Jul  1 16:57:14 2016 local2.info chat[25928]: send (ATD*99***1#^M)
+Fri Jul  1 16:57:14 2016 local2.info chat[25928]: expect (CONNECT)
+Fri Jul  1 16:57:14 2016 local2.info chat[25928]: ^M
+Fri Jul  1 16:57:14 2016 local2.info chat[25928]: ATD*99***1#^M^M
+Fri Jul  1 16:57:14 2016 local2.info chat[25928]: CONNECT
+Fri Jul  1 16:57:14 2016 local2.info chat[25928]:  -- got it
+Fri Jul  1 16:57:14 2016 local2.info chat[25928]: send ( ^M)
+Fri Jul  1 16:57:14 2016 daemon.info pppd[25926]: Serial connection established.
+Fri Jul  1 16:57:14 2016 kern.info kernel: [  499.500000] 3g-wan2: renamed from ppp0
+Fri Jul  1 16:57:14 2016 daemon.info pppd[25926]: Using interface 3g-wan2
+Fri Jul  1 16:57:14 2016 daemon.notice pppd[25926]: Connect: 3g-wan2 <--> /dev/ttyUSB0
+```
+
+If the modem doesn't connect change the line 'OK "ATD*99***1#"' from /etc/chatscripts/3g.chat to 'OK "ATD*99#"'. The line defines the dialup number for the modem. Restart the connection with 'ifup wan2'.
+
+Check the internet connectivity with:
 ```
 ifconfig
 ```
