@@ -136,7 +136,11 @@ Restart the wan interface or reboot:
 ```
 ifup wan2
 ```
-Reconnect again to Linkit_Smart_7688_1C42E1 WiFi if it losses connection.
+Reconnect again to Linkit_Smart_7688_1C42E1 WiFi if it losses connection. Check the internet connectivity with:
+```
+ifconfig
+```
+There should be the entry 3g-wan2.
 
 To diagnose any issues with the 3g Dongle use:
 ```
