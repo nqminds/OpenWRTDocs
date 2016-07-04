@@ -187,6 +187,26 @@ ifconfig
 ```
 There should be the entry 3g-wan2.
 
+If with 'logread' you see the following lines:
+```
+Fri Jul  1 16:57:18 2016 kern.info kernel: [  503.540000] usb 2-1: USB disconnect, device number 67
+Fri Jul  1 16:57:18 2016 kern.err kernel: [  503.550000] option1 ttyUSB0: usb_wwan_indat_callback: resubmit read urb failed. (-19)
+Fri Jul  1 16:57:18 2016 kern.err kernel: [  503.570000] option1 ttyUSB0: usb_wwan_indat_callback: resubmit read urb failed. (-19)
+Fri Jul  1 16:57:18 2016 kern.err kernel: [  503.590000] option1 ttyUSB0: usb_wwan_indat_callback: resubmit read urb failed. (-19)
+Fri Jul  1 16:57:18 2016 kern.err kernel: [  503.600000] option1 ttyUSB0: usb_wwan_indat_callback: resubmit read urb failed. (-19)
+Fri Jul  1 16:57:18 2016 kern.info kernel: [  503.620000] usb 2-1.1: USB disconnect, device number 68
+Fri Jul  1 16:57:18 2016 kern.info kernel: [  503.630000] usb 2-1.3: USB disconnect, device number 69
+Fri Jul  1 16:57:18 2016 kern.info kernel: [  503.650000] option1 ttyUSB0: GSM modem (1-port) converter now disconnected from ttyUSB0
+Fri Jul  1 16:57:18 2016 kern.info kernel: [  503.660000] option 2-1.3:1.0: device disconnected
+Fri Jul  1 16:57:18 2016 kern.info kernel: [  503.670000] option1 ttyUSB1: GSM modem (1-port) converter now disconnected from ttyUSB1
+Fri Jul  1 16:57:18 2016 kern.info kernel: [  503.690000] option 2-1.3:1.1: device disconnected
+Fri Jul  1 16:57:18 2016 kern.info kernel: [  503.700000] option1 ttyUSB2: GSM modem (1-port) converter now disconnected from ttyUSB2
+Fri Jul  1 16:57:18 2016 kern.info kernel: [  503.710000] option 2-1.3:1.2: device disconnected
+Fri Jul  1 16:57:18 2016 daemon.notice pppd[25926]: Modem hangup
+Fri Jul  1 16:57:18 2016 daemon.notice pppd[25926]: Connection terminated.
+```
+then the modem can't connect to the network.
+
 To diagnose any issues with the 3g Dongle use:
 ```
 gcom -d /dev/ttyUSB2 info
