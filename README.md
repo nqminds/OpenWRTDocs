@@ -98,7 +98,7 @@ Uncomment the following lines from /etc/config/network:
        option service umts
        option proto   3g
 
-The option apn and option device is set m2mpod sim and Huawei 3g Dongle. For a different sim set the right option apn and the following options if required in /etc/config/network:
+The option apn and option device is set m2mpod sim and Huawei 3g Dongle. For a different sim set the option apn and the username and password options if required in /etc/config/network:
 ```
 option username yourusername
 option password yourpassword
