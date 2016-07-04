@@ -74,7 +74,22 @@ To restart the wifi connection use:
 ```
 wifi
 ```
-Reconnect again to Linkit_Smart_7688_1C42E1 WiFi if it losses connection.
+Reconnect again to Linkit_Smart_7688_1C42E1 WiFi if it losses connection. To check for internet connectivity use:
+```
+ifconfig
+```
+There should be a similar entry to the following:
+```
+wlan455   Link encap:Ethernet  HWaddr 00:13:EF:B0:11:76  
+          inet addr:192.168.0.7  Bcast:192.168.0.255  Mask:255.255.255.0
+          inet6 addr: fe80::213:efff:feb0:1176/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1548 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1326 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:392714 (383.5 KiB)  TX bytes:308049 (300.8 KiB)
+```  
+The address wlan455 might differ. If there is internet connection inet addr field will show a valid IP address.
 
 ## Configure 3G Dongle ##
 Login to shell with: ssh root@192.168.100.1. Check that there's internet connection:
