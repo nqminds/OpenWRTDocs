@@ -235,7 +235,7 @@ gcom -d /dev/ttyUSB2 info
 ```
 where /dev/ttyUSB2 is the debug serial port for the Huawei 3G dongle.
 
-## 5. (a) Configure 3G Dongle (PPP mode) ##
+## 5. (a) Configure 3G Dongle (CDC Ethernet mode) ##
 Before following the instructions make sure that you uploaded the image **lks7688_cdc_ether.img** in step 2. Also make sure that the 3G dongle together with the SIM card works properly in CDC Ethrenet mode (there is a new network interface eth* with IP address 192.168.x.x) on a Linux machine, i.e., there is internet connection.
 
 Replace the contents of /etc/usb-mode.json from the device with **usb-modep-cdc.json** from the git repository. The file sets the vendor and product id for the 3G Dongle. Reboot and check with lsusb command whether the 3G dongle is in the CDC Ethernet mode:
@@ -387,7 +387,10 @@ When the device restarts there will be the following apps available from the bro
 ### WiFi ###
 One can change the WiFi SSID and password by following the instructions in step 3. However for everyday use the easist way is to login into LUCI interface: [mylinkit.local/cgi-bin/luci](http://mylinkit.local/cgi-bin/luci). Then go to the menu Network/WiFi. There press on the "Edit" button for Generic 802.11 Wireless Controller (radio3). In the "General setup" for "Interface configuration" edit ESSID (name of the WiFi network) and in "Wireless security" edit Key (WiFi network password). Then press "Save & Apply" button.
 
-### 3g Dongle ###
+### 3G Dongle ###
+If the PPP mode of the 3G dongle is not working properly then use the CDC Ethernet mode. The 3g Dongle Ethernet mode does not reset the USB connection of the WiFi dongle so both of them can be used at the same time. 
+
+To shutdown the connectcion for the 3G dongle go to http://mylinkit.local/cgi-bin/luci then Network/Interface and press on the Stop button for the WWAN connection.
 
 ## Useful Commands ##
 Show the kernel logs:
