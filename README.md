@@ -252,6 +252,25 @@ Check with 'dmesg' command if there modem is in the rigth mode:
 ```
 The new registered network interface for the 3G dongle is eth1.
 
+Add to /etc/config/network the following lines:
+```
+config interface 'wwan'
+        option ifname eth1
+        option proto 'dhcp'
+```
+
+Add wwan to the option network 'wan wan6' in /etc/config/firewall:
+```
+config zone
+        option name 'wan'
+        option output 'ACCEPT'
+        option forward 'REJECT'
+        option masq '1'
+        option mtu_fix '1'
+        option input 'ACCEPT'
+        option network 'wan wwan wan6'
+```
+
 ## 6. Configure SD-CARD ##
 LogIn into the shell with: ssh root@192.168.100.1
 
