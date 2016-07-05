@@ -52,8 +52,8 @@ Login into the shell with: sudo ssh root@192.168.100.1
 The configuration for the WiFi USB is located in /etc/config/wireless
 
 A typical WiFi options:
-
-       config wifi-device  radio3
+```
+config wifi-device  radio3
        option type     mac80211                            
        option channel  11                                      
        option hwmode   11g                
@@ -61,14 +61,14 @@ A typical WiFi options:
        option htmode   HT20                                
        option disabled 0
 
-       config wifi-iface
+config wifi-iface
        option device   'radio3'                            
        option network  'wan'                               
        option mode     'sta'                                   
        option ssid     'AMNET'
        option key '1234554321'                                 
        option encryption 'psk2'
-
+```
 The option path "101c1000.ohci/usb2/2-1/2-1.1/2-1.1:1.0" depends on which port the WiFi USB is installed. Use
 
 ```
@@ -112,14 +112,14 @@ opkg install comgt
 Copy **usb-mode.json** from the repository to /etc/usb-mode.json. The file sets the vendor and product id for the 3g Dongle. Check with dmesg or lsusb commands. The 3G dongle should be in modem mode (3 serial ports) with /dev/ttyUSB0 as the main modem port. Restart the device if it doesn't show the modem mode.
 
 Uncomment the following lines from /etc/config/network:
-
-       config interface 'wan2'
+```
+config interface 'wan2'
        option ifname  ppp0
        option device  /dev/ttyUSB0
        option apn data641003
        option service umts
        option proto   3g
-
+```
 The option apn and option device is set m2mpod sim and Huawei 3g Dongle. For a different sim set the option apn and the username and password options if required in /etc/config/network:
 ```
 option username yourusername
@@ -127,8 +127,8 @@ option password yourpassword
 ```
 
 Add wan2 to the option network 'wan wan6' in /etc/config/firewall:
-
-        config zone
+```
+config zone
         option name 'wan'
         option output 'ACCEPT'
         option forward 'REJECT'
@@ -136,7 +136,7 @@ Add wan2 to the option network 'wan wan6' in /etc/config/firewall:
         option mtu_fix '1'
         option input 'ACCEPT'
         option network 'wan wan2 wan6'
-
+```
 Replace the text in /etc/chatscripts/3g.chat with:
 ```
 ABORT   BUSY
@@ -270,6 +270,8 @@ config zone
         option input 'ACCEPT'
         option network 'wan wwan wan6'
 ```
+
+Check with 'ifconfig' that there is the new 'eth1' network interface.
 
 ## 6. Configure SD-CARD ##
 LogIn into the shell with: ssh root@192.168.100.1
