@@ -26,8 +26,8 @@ Open in browser http://192.168.100.1 Login with the password from the previous s
 Press "Upgrade Firmware"
 
 Choose the file from the OpenWRTDocs git repository (clone it on your host PC):
-**lks7688.img** (for the 3G dongle in PPP mode)
-**lks7688_cdc_ether.img** (for the 3G dongle in CDC Ethernet mode)
+1) **lks7688.img** (for the 3G dongle in PPP mode)
+2) **lks7688_cdc_ether.img** (for the 3G dongle in CDC Ethernet mode)
 
 Press "Upgrade and Restart"
 
