@@ -242,6 +242,15 @@ Replace the contents of /etc/usb-mode.json from the device with **usb-modep-cdc.
 ```
 Bus 002 Device 019: ID 12d1:14dc Huawei Technologies Co., Ltd.
 ```
+Check with 'dmesg' command if there modem is in the rigth mode:
+```
+[   31.290000] cdc_ether 2-1.3:1.0 eth1: register 'cdc_ether' at usb-101c1000.ohci-1.3, CDC Ethernet Device, 00:1e:10:1f:00:00
+[   31.330000] cdc_ether 2-1.3:1.0 eth1: kevent 12 may have been dropped
+[   31.350000] cdc_ether 2-1.3:1.0 eth1: kevent 11 may have been dropped
+[   31.380000] cdc_ether 2-1.3:1.0 eth1: kevent 11 may have been dropped
+[   31.410000] usb-storage 2-1.3:1.2: no of_node; not parsing pinctrl DT
+```
+The new registered network interface for the 3G dongle is eth1.
 
 ## 6. Configure SD-CARD ##
 LogIn into the shell with: ssh root@192.168.100.1
