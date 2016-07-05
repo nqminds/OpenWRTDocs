@@ -25,7 +25,7 @@ Open in browser http://192.168.100.1 Login with the password from the previous s
 
 Press "Upgrade Firmware"
 
-Choose the file from the OpenWRTDocs git repository (clone it on your host PC):
+Choose one of the image files from the OpenWRTDocs git repository (clone it on your host PC):
 
 1. **lks7688.img** (for the 3G dongle in PPP mode)
 
@@ -45,7 +45,7 @@ Press "Upload Archive"
 
 Reconnect again to Linkit_Smart_7688_1C42E1 if it losses connection WiFi. After the restoring the backup the password is set to: 1234554321. Use the backup password to set a new password.
 
-## Configure WiFi ##
+## 3. Configure WiFi ##
 Login into the shell with: sudo ssh root@192.168.100.1
 
 The configuration for the WiFi USB is located in /etc/config/wireless
@@ -96,7 +96,9 @@ wlan455   Link encap:Ethernet  HWaddr 00:13:EF:B0:11:76
 ```  
 The address wlan455 might differ. If there is internet connection inet addr field will show a valid IP address.
 
-## Configure 3G Dongle ##
+## 4. (a) Configure 3G Dongle (PPP mode) ##
+Before following the instructions make sure that you uploaded the image **lks7688.img** in step 2.
+
 Login to shell with: ssh root@192.168.100.1. Check that there's internet connection:
 ```
 ifconfig
@@ -232,7 +234,10 @@ gcom -d /dev/ttyUSB2 info
 ```
 where /dev/ttyUSB2 is the debug serial port for the Huawei 3G dongle.
 
-## Configure SD-CARD ##
+## 5. (a) Configure 3G Dongle (PPP mode) ##
+Before following the instructions make sure that you uploaded the image **lks7688.img** in step 2.
+
+## 6. Configure SD-CARD ##
 LogIn into the shell with: ssh root@192.168.100.1
 
 Find the SD-CARD partition:
@@ -274,7 +279,7 @@ Check if the SD-CARD mounted with:
 ```
 df -h
 ```
-## Configure Cozy-Email Client ##
+## 7. Configure Cozy-Email Client ##
 Clone the cozy-email repo into /root:
 ```
 cd /root
@@ -282,7 +287,7 @@ git clone https://user@github.com/nqminds/cozy-emails.git
 ```
 Replace 'user' in the above command with the git account username. 
 
-## Configure Toby's App Client ##
+## 8. Configure Toby's App Client ##
 Clone the Toby's app client repo into /root:
 ```
 cd /root
@@ -328,10 +333,10 @@ nohup /root/cozy-email-run.sh > /root/cozy-emails.log 2>&1 &
 nohup node --harmony_proxies /root/nqm-remote-device-wrt/index.js > /dev/null 2>&1 &
 ```
 
-## Device Management ##
+## 9. Device Management ##
 Connect to the device's WiFi network if the internet is not shared between the device and the user (for instace when the device is connected to a 3G Dongle). If the device and the user share the same internet connection (through the same WiFi router) one doesn't need to connect to the device's WiFi network to access the apps, etc. 
 
-### Apps ###
+### 10. Apps ###
 When the device restarts there will be the following apps available from the broser:
 
 1. Cozy-emails:
