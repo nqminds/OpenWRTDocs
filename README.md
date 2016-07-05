@@ -10,6 +10,7 @@
 7. Configure Toby's app client
 8. Configure startup script
 9. Device management
+10. Apps
 
 ## 1. Change root password ##
 Connect to WiFi: Linkit_Smart_7688_1C42E1 (the last 6 characters are board dependent).
@@ -295,7 +296,7 @@ git clone https://user@github.com/nqminds/nqm-remote-device-wrt.git
 ```
 Replace 'user' in the above command with the git account username. 
 
-## Configure Startup Script##
+## 9. Configure Startup Script##
 Install coreutils-nohup package:
 ```
 opkg update
@@ -333,10 +334,10 @@ nohup /root/cozy-email-run.sh > /root/cozy-emails.log 2>&1 &
 nohup node --harmony_proxies /root/nqm-remote-device-wrt/index.js > /dev/null 2>&1 &
 ```
 
-## 9. Device Management ##
+## 10. Device Management ##
 Connect to the device's WiFi network if the internet is not shared between the device and the user (for instace when the device is connected to a 3G Dongle). If the device and the user share the same internet connection (through the same WiFi router) one doesn't need to connect to the device's WiFi network to access the apps, etc. 
 
-### 10. Apps ###
+### 11. Apps ###
 When the device restarts there will be the following apps available from the broser:
 
 1. Cozy-emails:
