@@ -38,7 +38,7 @@ Choose file from the OpenWRtDocs git repository: **backup-mylinkit-2016-06-27.ta
 
 Press "Upload Archive"
 
-Reconnect again to Linkit_Smart_7688_1C42E1 if it losses connection WiFi.
+Reconnect again to Linkit_Smart_7688_1C42E1 if it losses connection WiFi. After the restoring the backup the password is set to: 1234554321. Use the backup password to set a new password.
 
 ## Configure WiFi ##
 Login into the shell with: sudo ssh root@192.168.100.1
