@@ -236,7 +236,7 @@ gcom -d /dev/ttyUSB2 info
 where /dev/ttyUSB2 is the debug serial port for the Huawei 3G dongle.
 
 ## 5. (a) Configure 3G Dongle (PPP mode) ##
-Before following the instructions make sure that you uploaded the image **lks7688.img** in step 2.
+Before following the instructions make sure that you uploaded the image **lks7688_cdc_ether.img** in step 2.
 
 ## 6. Configure SD-CARD ##
 LogIn into the shell with: ssh root@192.168.100.1
