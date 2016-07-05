@@ -236,7 +236,12 @@ gcom -d /dev/ttyUSB2 info
 where /dev/ttyUSB2 is the debug serial port for the Huawei 3G dongle.
 
 ## 5. (a) Configure 3G Dongle (PPP mode) ##
-Before following the instructions make sure that you uploaded the image **lks7688_cdc_ether.img** in step 2.
+Before following the instructions make sure that you uploaded the image **lks7688_cdc_ether.img** in step 2. Also make sure that the 3G dongle together with the SIM card works properly in CDC Ethrenet mode (there is a new network interface eth* with IP address 192.168.x.x) on a Linux machine, i.e., there is internet connection.
+
+Replace the contents of /etc/usb-mode.json from the device with **usb-modep-cdc.json** from the git repository. The file sets the vendor and product id for the 3G Dongle. Reboot and check with lsusb command whether the 3G dongle is in the CDC Ethernet mode:
+```
+Bus 002 Device 019: ID 12d1:14dc Huawei Technologies Co., Ltd.
+```
 
 ## 6. Configure SD-CARD ##
 LogIn into the shell with: ssh root@192.168.100.1
