@@ -3,14 +3,15 @@
 1. Change root password
 2. Upgrade firmware
 3. Configure WiFi
-4. Configure 3G dongle
+4(a). Configure 3G dongle (PPP option)
+4(b). Configure 3G dongle (CDC Ethernet option)
 5. Configure SD-CARD
 6. Configure Cozy-email client
 7. Configure Toby's app client
 8. Configure startup script
 9. Device management
 
-## Change root password ##
+## 1. Change root password ##
 Connect to WiFi: Linkit_Smart_7688_1C42E1 (the last 6 characters are board dependent).
 
 Open a browser window and type: http://192.168.100.1
@@ -19,12 +20,14 @@ In the password field type the new password and press "Submit".
 
 Login again with the new password.
 
-## Upgrade Firmware ##
+## 2. Upgrade Firmware ##
 Open in browser http://192.168.100.1 Login with the password from the previous step. 
 
 Press "Upgrade Firmware"
 
-Choose the file from the OpenWRTDocs git repository (clone it on your host PC): **lks7688.img**
+Choose the file from the OpenWRTDocs git repository (clone it on your host PC):
+**lks7688.img** (for the 3G dongle in PPP mode)
+**lks7688_cdc_ether.img** (for the 3G dongle in CDC Ethernet mode)
 
 Press "Upgrade and Restart"
 
