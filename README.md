@@ -3,8 +3,8 @@
 1. Change root password
 2. Upgrade firmware
 3. Configure WiFi
-4(a). Configure 3G dongle (PPP option)
-4(b). Configure 3G dongle (CDC Ethernet option)
+4. (a)Configure 3G dongle (PPP option)
+4. (b)Configure 3G dongle (CDC Ethernet option)
 5. Configure SD-CARD
 6. Configure Cozy-email client
 7. Configure Toby's app client
