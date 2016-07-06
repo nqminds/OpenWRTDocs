@@ -47,7 +47,7 @@ Press "Upload Archive"
 Reconnect again to Linkit_Smart_7688_1C42E1 if it losses connection WiFi. After the restoring the backup the password is set to: 1234554321. Use the backup password to set a new password.
 
 ## 3. Configure WiFi ##
-Login into the shell with: sudo ssh root@192.168.100.1
+Login into the shell with: sudo ssh root@192.168.100.1. Connect the WiFi dongle to the 4 port hub and check with 'lsusb' command if the device detects the dongle.
 
 The configuration for the WiFi USB is located in /etc/config/wireless
 
