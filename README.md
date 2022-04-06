@@ -1,4 +1,6 @@
-# OpenWRT Device Configuration Steps #
+# OpenWRT configs for BYOD project
+
+## OpenWRT Device Configuration Steps #
 
 1. Change root password
 2. Upgrade firmware
